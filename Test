@@ -25,7 +25,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoH
 local moderators = game:HttpGet("https://raw.githubusercontent.com/LegoHacks/Swordburst-2/main/Moderators.txt"):split("\n");
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Noclip.lua"))();
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Fly"))();
+ -- this is patched. loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Fly"))();
 
 -- Main Script
 
