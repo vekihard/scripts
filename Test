@@ -245,7 +245,7 @@ local rpcKey = getupvalue(services.Combat.Init, 2);
 local function attack(target)
     -- for i = 1, library.flags.attack_speed do --> Attack speed was patched.
         replicatedStorage.Event:FireServer("Skills", {"UseSkill", "Summon Pistol"});
-        replicatedStorage.Event:FireServer("Combat", rpcKey, {"Attack", "Summon Pistol", "1", target});
+        replicatedStorage.Event:FireServer("Combat", rpcKey, {"Attack", "Summon Pistol", "3", target});
     -- end;
 end;
 
