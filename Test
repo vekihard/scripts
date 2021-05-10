@@ -516,4 +516,4 @@ end);
 
 library:Init();
 
-print('Press "K" to aura')
+print('Press "K" to Kill Aura')
