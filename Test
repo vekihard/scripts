@@ -515,5 +515,3 @@ spawn(function()
 end);
 
 library:Init();
-
-print('Press "K" to Kill Aura')
