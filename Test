@@ -10,6 +10,7 @@
 -- Init
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Noclip.lua"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Fly"))();
 
 local getupvalue = getupvalue or debug.getupvalue;
 
