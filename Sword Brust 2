@@ -244,10 +244,10 @@ end;
 
 local rpcKey = getupvalue(services.Combat.Init, 2);
 local function attack(target)
-    -- for i = 1, library.flags.attack_speed do --> Attack speed was patched.
+     for i = 1, library.flags.attack_speed do 
         replicatedStorage.Event:FireServer("Skills", {"UseSkill", "Summon Pistol"});
         replicatedStorage.Event:FireServer("Combat", rpcKey, {"Attack", "Summon Pistol", "3", target});
-    -- end;
+     end;
 end;
 
 for i, v in next, players:GetPlayers() do
@@ -320,15 +320,12 @@ autoFarmTab:AddToggle({
     flag = "bosses"
 });
 
---[[
-    -- This is patched
     autoFarmTab:AddSlider({
         text = "Attack Speed";
         flag = "attack_speed";
         min = 1;
         max = 10;
-    });
-]]
+});
 
 autoFarmTab:AddSlider({
     text = "Attack Range";
