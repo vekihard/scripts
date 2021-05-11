@@ -24,6 +24,9 @@ local heartbeat = runService.heartbeat;
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoHacks/Utilities/main/UI.lua"))();
 local moderators = game:HttpGet("https://raw.githubusercontent.com/LegoHacks/Swordburst-2/main/Moderators.txt"):split("\n");
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Fly"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Noclip.lua"))();
+
 -- Main Script
 
 local mobs = {
