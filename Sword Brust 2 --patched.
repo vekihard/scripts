@@ -24,9 +24,6 @@ local heartbeat = runService.heartbeat;
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LegoHacks/Utilities/main/UI.lua"))();
 local moderators = game:HttpGet("https://raw.githubusercontent.com/LegoHacks/Swordburst-2/main/Moderators.txt"):split("\n");
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Noclip.lua"))();
- -- this is patched. loadstring(game:HttpGet("https://raw.githubusercontent.com/vekihard/scripts/main/Fly"))();
-
 -- Main Script
 
 local mobs = {
@@ -246,18 +243,18 @@ local rpcKey = getupvalue(services.Combat.Init, 2);
 local function attack(target)
     -- for i = 1, library.flags.attack_speed do --> Attack speed was patched.
         replicatedStorage.Event:FireServer("Skills", {"UseSkill", "Summon Pistol"});
-        replicatedStorage.Event:FireServer("Combat", rpcKey, {"Attack", "Summon Pistol", "3", target});
+        replicatedStorage.Event:FireServer("Combat", rpcKey, {"Attack", "Summon Pistol", "1", target});
     -- end;
 end;
 
 for i, v in next, players:GetPlayers() do
-    if (moderators[tostring(v.UserId)]) then
+    if (table.find(moderators, tostring(v.UserId))) then
         return client:Kick("\n[Moderator Detected]\n" .. v.Name);
     end;
 end;
 
 players.PlayerAdded:Connect(function(player)
-    if (moderators[tostring(player.UserId)]) then
+    if (table.find(moderators, tostring(player.UserId))) then
         return client:Kick("\n[Moderator Detected]\n" .. player.Name);
     end;
 end);
